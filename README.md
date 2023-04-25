@@ -5,7 +5,9 @@ Build with GCC:
 $ gcc -o hbcrc32sum hbcrc32sum.c
 
 Usage:
+
 Individual files from software updates:
+
 $ hbcrc32sum < 8R0906961FE/AH6/Main/0/default/ah6a-us_rev03-001.usf
 2851ec52
 735f0299
@@ -29,6 +31,7 @@ eae928a3
 10191808 2512c075
 
 Package components from navigation database updates:
+
 $ cd 8R0051884EN/pkgdb/CTYS3TC_NAR
 $ cat 3PN163NA16343P1244a.4_4.ATLAS CTYS3TC_NAR.conf | hbcrc32sum 209715200
 b18e580a
@@ -37,4 +40,7 @@ ab1355ae
 
 The tool accepts one argument: the checksum size for (very) large files.
 
-I'm still looking to figure out how to determine the CRC32 value for MetafileChecksum in MMI3G metainfo2.txt files.
+I'm still looking to figure out how to determine the CRC32 value for
+MetafileChecksum in MMI3G metainfo2.txt files.
+
+DrGER / Apr 2023
