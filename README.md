@@ -8,7 +8,7 @@ $ gcc -o hbcrc32sum hbcrc32sum.c
 Usage:
 
 Individual files from software updates:
-
+```
 $ hbcrc32sum < 8R0906961FE/AH6/Main/0/default/ah6a-us_rev03-001.usf
 <br>
 2851ec52
@@ -31,6 +31,7 @@ c58b5417
 465b0bf7
 eae928a3
 10191808 2512c075
+```
 
 Package components from navigation database updates:
 
