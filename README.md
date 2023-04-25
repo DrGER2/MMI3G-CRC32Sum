@@ -2,6 +2,7 @@
 Command line tool to calculate CRC32 checksums for MMI3G metainfo2.txt files
 
 Build with GCC:
+<br>
 $ gcc -o hbcrc32sum hbcrc32sum.c
 
 Usage:
@@ -9,6 +10,7 @@ Usage:
 Individual files from software updates:
 
 $ hbcrc32sum < 8R0906961FE/AH6/Main/0/default/ah6a-us_rev03-001.usf
+<br>
 2851ec52
 735f0299
 850b4011
@@ -33,7 +35,9 @@ eae928a3
 Package components from navigation database updates:
 
 $ cd 8R0051884EN/pkgdb/CTYS3TC_NAR
+<br>
 $ cat 3PN163NA16343P1244a.4_4.ATLAS CTYS3TC_NAR.conf | hbcrc32sum 209715200
+<br>
 b18e580a
 ab1355ae
 575321189 bc13314a
