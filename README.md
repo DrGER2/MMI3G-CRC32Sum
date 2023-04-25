@@ -1,14 +1,14 @@
 # MMI3G-CRC32Sum
-Command line tool to calculate CRC32 checksums for MMI3G metainfo2.txt files
+hbcrc32sum -- A command line tool to calculate CRC32 checksums used in MMI3G metainfo2.txt files.
 
 Build with GCC:
 ```
-$ gcc -o hbcrc32sum hbcrc32sum.c
+$ gcc -O3 -o hbcrc32sum hbcrc32sum.c
 ```
 
 Usage:
 
-Individual files from software updates:
+Individual files from software updates using the default checksum file size (512K bytes):
 ```
 $ hbcrc32sum < 8R0906961FE/AH6/Main/0/default/ah6a-us_rev03-001.usf
 2851ec52
@@ -41,9 +41,8 @@ b18e580a
 ab1355ae
 575321189 bc13314a
 ```
-The tool accepts one argument: the checksum size for (very) large files, found typically in the metainfo2.txt file.
+The tool accepts one argument: the checksum size (in bytes) for (very) large files, found typically in the metainfo2.txt file.
 
-I'm still looking to figure out how to determine the CRC32 value for
-MetafileChecksum in MMI3G metainfo2.txt files.
+I'm still looking to figure out how to determine the CRC32 value for MetafileChecksum in MMI3G metainfo2.txt files.
 
 DrGER / Apr 2023
