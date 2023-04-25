@@ -1,5 +1,5 @@
 # MMI3G-CRC32Sum
-hbcrc32sum -- A command line tool to calculate CRC32 checksums used in MMI3G metainfo2.txt files.
+hbcrc32sum -- A simple command line tool to calculate CRC32 checksums used in MMI3G metainfo2.txt files.
 
 Build with GCC:
 ```
