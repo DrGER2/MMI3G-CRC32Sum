@@ -43,6 +43,13 @@ ab1355ae
 ```
 The tool accepts one argument: the checksum size (in bytes) for (very) large files, found typically in the metainfo2.txt file.
 
-I'm still looking to figure out how to determine the CRC32 value for MetafileChecksum in MMI3G metainfo2.txt files.
+The tool can be used to verify or compute the checksum of software update metainfo2.txt files by omitting the MetafileChecksum line from the computed file, for example, consider the metainfo2.txt file for RNS 850 software update HN+_EU_VW_K0821:
+```
+$ grep MetafileChecksum metainfo2.txt                     
+MetafileChecksum = "66417366"
+$ sed '/^MetafileChecksum = /d' metainfo2.txt | hbcrc32sum
+97469 66417366 # Match !
+```
+I'm still looking to figure out how to determine the CRC32 value for MetafileChecksum in MMI3G nav database update metainfo2.txt files.
 
 DrGER / Apr 2023
